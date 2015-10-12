@@ -4,7 +4,7 @@ describe "Event Dimension" do
   specify "Mutating events" do
     events = [OpenStruct.new, OpenStruct.new]
 
-    dimension = EventGenerator::Controls::Dimension::EventType.new
+    dimension = EventStore::EventGenerator::Controls::Dimension::EventType.new
     dimension.values.map.with_index do |value, index|
       event = events.fetch index
       value.(event)

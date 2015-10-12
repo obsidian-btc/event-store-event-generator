@@ -8,7 +8,7 @@ require 'controls'
 require 'runner'
 require 'pry'
 
-require 'event_generator/controls'
+require 'event_store/event_generator/controls'
 
 def logger(name)
   name = name.split('/').last

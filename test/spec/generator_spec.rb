@@ -1,6 +1,6 @@
 require_relative './spec_init'
 
-generator = EventGenerator::Controls::Generator.build
+generator = EventStore::EventGenerator::Controls::Generator.build
 
 describe 'Generating events' do
   events = generator.first 7

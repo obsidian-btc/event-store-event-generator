@@ -1,7 +1,8 @@
 require_relative './spec_init'
 
 describe 'Generating write events' do
-  generator = EventGenerator::Write.build EventGenerator::Controls::Template.example
+  template = EventStore::EventGenerator::Controls::Template.example
+  generator = EventStore::EventGenerator::Write.build template
 
   specify 'Setting stream name' do
     event = generator.next
@@ -12,6 +13,7 @@ describe 'Generating write events' do
   end
 
   specify 'Event ID' do
+    generator.counter = 1
     event_ids = []
 
     2.times do

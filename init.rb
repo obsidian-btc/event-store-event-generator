@@ -5,4 +5,4 @@ unless $LOAD_PATH.include? lib_path
   $LOAD_PATH << lib_path
 end
 
-require 'event_generator'
+require 'event_store/event_generator'

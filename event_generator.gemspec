@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
-  s.name = 'event_generator'
-  s.summary = 'Generates events in a controlled fashion'
+  s.name = 'event_store_event_generator'
+  s.summary = 'Generates arbitrary length sequences of EventStore events in a controlled fashion'
   s.version = '0.0.0'
   s.authors = ['']
   s.require_paths = ['lib']

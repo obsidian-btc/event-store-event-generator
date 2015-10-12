@@ -1,7 +1,7 @@
 require_relative './spec_init'
 
 describe 'Permutations of Event Dimensions' do
-  permutations = EventGenerator::Controls::Template.permutations
+  permutations = EventStore::EventGenerator::Controls::Template.permutations
 
   specify 'Mutating events' do
     events = []

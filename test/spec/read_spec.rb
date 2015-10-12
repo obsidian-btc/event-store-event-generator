@@ -1,7 +1,8 @@
 require_relative './spec_init'
 
 describe 'Generating read events' do
-  generator = EventGenerator::Read.build EventGenerator::Controls::Template.example
+  template = EventStore::EventGenerator::Controls::Template.example
+  generator = EventStore::EventGenerator::Read.build template
 
   specify 'Created time' do
     event = generator.next
