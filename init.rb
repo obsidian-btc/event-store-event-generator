@@ -1,8 +1,10 @@
-require 'bundler/setup' unless ENV['DISABLE_BUNDLER'] == 'on'
+lib_dir = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift lib_dir unless $LOAD_PATH.include?(lib_dir)
 
-lib_path = File.expand_path '../lib', __FILE__
-unless $LOAD_PATH.include? lib_path
-  $LOAD_PATH << lib_path
+libraries_dir = ENV['LIBRARIES_DIR']
+unless libraries_dir.nil?
+  libraries_dir = File.expand_path(libraries_dir)
+  $LOAD_PATH.unshift libraries_dir unless $LOAD_PATH.include?(libraries_dir)
 end
 
 require 'event_store/event_generator'
